@@ -12,8 +12,8 @@ local Keys = {
 
 local CurrentAction		= nil
 
-RegisterNetEvent('hjalte:help')
-AddEventHandler('hjalte:help', function()
+RegisterNetEvent('mario3:help')
+AddEventHandler('mario3:help', function()
 	TriggerEvent("pNotify:SendNotification", {text = "Change damaged wheel!", type = "success", timeout = 2000, layout = "centerLeft"})
 	animation()
 end)
@@ -133,7 +133,7 @@ function animation()
 			TaskStartScenarioInPlace(GetPlayerPed(-1), "CODE_HUMAN_MEDIC_KNEEL", 0, false)
 			ClearPedTasks(GetPlayerPed(-1))
 			DeleteEntity(prop)
-			TriggerServerEvent('hjalte:takeTheTire')
+			TriggerServerEvent('mario3:taketire')
 	
 				Citizen.CreateThread(function()
 	
