@@ -11,7 +11,7 @@ vRPclient = Tunnel.getInterface("vRP","vrp_tires")
             choices[">⚙️ Change Tire"] = {function(player,choice)
                 local user_id = vRP.getUserId({player})
                 if user_id ~= nil then
-                          TriggerClientEvent('hjalte:help', player)
+                          TriggerClientEvent('mario3:help', player)
                 vRP.closeMenu({player})
             end
         end,""}
@@ -20,8 +20,8 @@ vRPclient = Tunnel.getInterface("vRP","vrp_tires")
     end, 5.50
 })
 
-RegisterNetEvent('hjalte:takeTheTire')
-AddEventHandler('tires:takeTheTire', function()
+RegisterNetEvent('mario3:taketire')
+AddEventHandler('mario3:takeTheTire', function()
 	local user_id = vRP.getUserId({player})
 
 	vRP.tryGetInventoryItem({user_id, "Wheel", 1, true})
